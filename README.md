@@ -144,10 +144,11 @@ The game ends with one of four possible outcomes:
 All Klingons destroyed
 
 ***Mission Failure***
-Player resigns
-Enterprise destroyed
-Failure to complete mission by specified stardate
-Energy supply (including shields) completely depleted
+
+- Player resigns
+- Enterprise destroyed
+- Failure to complete mission by specified stardate
+- Energy supply (including shields) completely depleted
 
 
 
