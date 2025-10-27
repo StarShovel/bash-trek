@@ -138,10 +138,11 @@ You must complete your mission to eradicate the Klingon presence in the galaxy b
 
 ### Game Conclusion
 
-The game ends with one of four possible outcomes:
+The game ends with one of five possible outcomes:
 
 ***Mission Success***
-All Klingons destroyed
+
+- All Klingons destroyed
 
 ***Mission Failure***
 
@@ -174,3 +175,19 @@ So I decided that the "Klingon response" phase of the game would never leave the
 
 This turned out to be not merely a solution to a highly unlikely problem, but serendipitously an improvement to the game. It introduced an element of uncertainty to the combat situation; an added risk.
 
+Another feature I haven't seen before in other *Star Trek* implementations: the distribution of objects in a quadrant is not entirely random. I came up with a method to ensure that objects used to populate a new quadrant (stars, Klingons, starbase) could never be adjacent. Why? Well there is a remote possibility that, using a simple random method, the Enterprise could enter a new quadrant at a galaxy corner surrounded by three stars. Navigation would not be possible; a stalemate situation.
+
+Again though as well as solving an unlikely problem, this improved the game - making quadrant layouts more aesthetically pleasing.  
+  
+Or I think so, anyway.
+
+
+---
+
+## License
+
+*Bash Trek* is free software: you can redistribute it and/or modify it under the terms of the
+[GNU General Public License](LICENSE) as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+This program is distributed **without any warranty**; without even the implied warranty of **merchantability** or **fitness for a particular purpose**.
+See the [LICENSE](LICENSE) file for details.
