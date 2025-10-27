@@ -86,6 +86,7 @@ When the NAV command is issued, the command interface will prompt for the direct
 <p>
   <img src="dirs.png" alt="Bash Trek Directions" style="display:block; margin-left:0;">
 </p>
+
 You'll then be prompted for the distance you want to travel (or "warp"). Note that the ship's astro-navigation system will not permit you to enter an invalid distance.
 
 If navigation in a particular direction is constrained by an obstacle (star, Klingon, wormhole  or starbase) in the present quadrant, the available range will be shown in yellow (to indicate the distance to the obstacle) - as shown below, where the player has selected '2' (right) as the ship's direction. The ship's path is obstructed by a star four positions away.
@@ -93,7 +94,8 @@ If navigation in a particular direction is constrained by an obstacle (star, Kli
 <p>
   <img src="obstruct.png" alt="Bash Trek Obstruction" style="display:block; margin-left:0;">
 </p>
-Note that if a wormhole (see **Wormholes** below) were at the same position rather than a star, the command interface would allow you to enter a '4' - to enter it.
+
+Note that if a wormhole (see *Wormholes* below) were at the same position rather than a star, the command interface would allow you to enter a '4' - to enter it.
 
 You can't leave the galaxy - the astro-navigation system won't permit the necessary warp value to be entered.
 
@@ -104,6 +106,7 @@ From time to time a wormhole may appear in the present quadrant. These are time-
 <p>
   <img src="wormholeex.png" alt="Bash Trek Wormhole" style="display:block; margin-left:0;">
 </p>
+
 ### Scanners
 
 The Enterprise has short and long range scanning systems. A **short range scan** displays objects detected in the present quadrant, as shown in the images used to illustrate the **Navigation** section above. A short range scan will be performed automatically when the Enterprise enters a new quadrant, or can be activated (if not already active) by using the SRS command.
