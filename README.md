@@ -125,7 +125,7 @@ You have two weapons at your disposal, phasers and (photon) torpedoes. In the *S
 
 ### Starbases
 
-Two starbases are present in the galaxy. Docking with a starbase is achieved by navigating to an adjacent position. Doing so will replenish torpedo, shield and energy supplies to their default values (0, 900 and 1500 respectively). Below, the Enterprise is docked to a starbase in quadrant 7,3.
+Two starbases are present in the galaxy. Docking with a starbase is achieved by navigating to an adjacent position. Doing so will replenish torpedo, shield and energy supplies to their default values (8, 900 and 1500 respectively). Below, the Enterprise is docked to a starbase in quadrant 7,3.
 
 <p>
   <img src="starbase.png" alt="Bash Trek Starbase" style="display:block; margin-left:0;">
