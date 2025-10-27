@@ -158,7 +158,7 @@ I started coding *Bash Trek* in 2018 but after a week or two, became distracted 
 
 I didn't use it to design or write any of the code, since I wanted to stay on top of that myself. But I used it judiciously for debugging.
 
-*Bash Trek* turned into a sort of obsessive optimisation exercise. Bearing in mind that similar code ran successfully on the computers of the 1970s, there is hardly a need to make it more efficient. But I couldn't help myself. I learned to write programs on a ZX-81 and I've always had a compulsion to make my code as streamlined and efficient as possible. I rewrote a lot of the code I'd 
+*Bash Trek* turned into a sort of obsessive optimisation exercise. Bearing in mind that similar code ran successfully on the computers of the 1970s, there is hardly a need to make it more efficient. But I couldn't help myself. I learned to write programs on a ZX-81 and I've always had a compulsion to make my code as streamlined and efficient as possible. I reworked a lot of the code I'd written in 2018. 
 
 For example: a short range display screen is built by traversing the quadrant grid and taking account of objects in their positions. I store the whole short range scan screen in a string variable so that it can be displayed with a single write(), and so that it can be cached and reused until the data is considered stale.
 
