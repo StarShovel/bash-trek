@@ -112,10 +112,6 @@ strikedamage() {
  (( dam = $1 / ($2 + 1) ))
 }
 
-logger () {
- echo $1 >> /tmp/trek.log
-}
-
 delklingon () {
  local -i last idx=$1 lkind=$2 # indexes into klingon array and local quad
  local -i x=${klix[idx]} y=${kliy[idx]}
@@ -626,9 +622,7 @@ shortrangescan () {
 
     if [[ -v scangrids[qindex] ]]; then
        glsrsbuf=${scangrids[qindex]}
-       logger "using scangrids $qindex"
     else
-       logger "rebuilding srs"
        (( seen[qindex] = 1 ))
        local -n srsquad=$1
        local -i y x ybase
@@ -864,7 +858,6 @@ navigate () {
        done
 
        if (( newquad )); then
-          logger "new quad at $stardate"
           (( wormgo[qindex] > 1 )) && unset wormgo[qindex] # remove wormhole if ever active
           (( entx=destx, enty=desty )) 
           # in a new quad, update globals
