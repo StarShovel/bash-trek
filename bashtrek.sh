@@ -19,7 +19,6 @@
 # Version 1.0 - October 2025
 # Requires Bash >= 4.3
 
-
 qdistance () {
 
  ## max possible is 9
@@ -497,43 +496,6 @@ drawlabels () {
   
 }
 
-statscreen_old () {
-
- local OPTIND=1
- local sdisp cond cclr opt s
-
- while getopts "qcdekst" opt; do
-    case $opt in
-      q) printf "${statb[20]}%6s" "$quadx,$quady" ;;
-      c) if (( docked )); then
-            cond="DOCKED"
-            cclr=$cya
-         elif (( quadkli )); then
-            cond="RED"
-            cclr=$red
-         elif (( shields < 500 || energy < 600 )); then
-            cond="AMBER"
-            cclr=$yel
-         else
-            cond="GREEN"
-            cclr=$grn
-         fi
-         printf "${statb[19]}%s%6s%s" $cclr $cond $off ;;
-
-      d) s="${stardate%?}"
-         printf "${statb[17]}%6s" ${s:0:-1}.${s: -1} ;;
-
-      e) printf "${statb[16]}%6d" $energy ;;
-      k) printf "${statb[15]}%6d" $galkli ;;
-      s) (( shields < 0 )) && sdisp="DOWN" || sdisp=$shields
-         printf "${statb[14]}%6s" $sdisp ;;
-
-      t) printf "${statb[13]}%6d" $torps
-    esac
- done
-
-}
-
 statscreen () {
 
  local OPTIND=1
@@ -901,7 +863,7 @@ navigate () {
 
 galaxinit () {
 
- local -i tmp kli i j q
+ local -i tmp kli i j q ra
  local -n lgalax=$1
  
  # provisional number of quads with klingons or a base
@@ -918,9 +880,10 @@ galaxinit () {
  done
 
  # insert stars and wormhole no go
- for q in {0..63} ; do
-    (( lgalax[q] = 2 + (RANDOM % 3) ))
-    (( RANDOM % 5 )) || (( wormgo[q] = 1 ))
+ for (( q=0; q<64; q++ )); do
+    (( r = RANDOM ))
+    (( lgalax[q] = 2 + (r % 3) ))
+    (( r % 5 )) || (( wormgo[q] = 1 ))
  done
 
  # insert starbases into the first two quads we picked
@@ -1061,8 +1024,10 @@ declare -ia xmult=(0 1 1 1 0 -1 -1 -1)
 declare -ia ymult=(-1 -1 0 1 1 1 0 -1)
 
 # enterprise position in all 64 * 64 cells
-declare -i entx=$((RANDOM & 63))
-declare -i enty=$((RANDOM & 63))
+
+declare -i rnd=$RANDOM
+declare -i entx=$(( rnd & 63 ))
+declare -i enty=$(( (rnd >> 6) & 63 ))
 
 # which quadrant, and which cell we're in
 
