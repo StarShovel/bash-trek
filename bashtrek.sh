@@ -50,11 +50,12 @@ coordsetup () {
 
 wormtravel () {
 
- local -i qind qy ybase
+ local -i qind qy ybase r
  local -n newx=$1 newy=$2
 
- newx=$((RANDOM & 63))
- newy=$((RANDOM & 63))
+ (( r = RANDOM ))
+ newx=$(( r & 63 ))
+ newy=$(( (r >> 6) & 63 ))
 
  # walk through the X until we find "unoccupied"
  # only 5 quads can be cached at any time
@@ -863,7 +864,7 @@ navigate () {
 
 galaxinit () {
 
- local -i tmp kli i j q ra
+ local -i tmp kli i j q r
  local -n lgalax=$1
  
  # provisional number of quads with klingons or a base
